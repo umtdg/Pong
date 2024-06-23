@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour {
   }
 
   private void OnApplicationPause(bool pauseStatus) {
-    if (pauseStatus) {
+    if (pauseStatus && gameManager.CheckState(GameManager.GameState.Playing)) {
       Pause();
     }
   }
