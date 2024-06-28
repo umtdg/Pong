@@ -48,7 +48,6 @@ public class Ball : MonoBehaviour {
   }
 
   private void CollideWithWall() {
-    Debug.Log("Wall");
     _velocity.y = -_velocity.y;
     _rigidbody.velocity = _velocity;
   }
@@ -72,7 +71,6 @@ public class Ball : MonoBehaviour {
 
     _velocity = _speed * _velocity.normalized;
     _rigidbody.velocity = _velocity;
-    Debug.Log($"{_velocity.x}");
   }
 
   public void ResetBall() {
